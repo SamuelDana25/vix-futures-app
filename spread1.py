@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader("Téléchargez votre fichier CSV", type=["csv"]
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 else:
-    default_file = "fichier_fusionne.csv"
+    default_file = "vix_fut.csv"
     try:
         df = pd.read_csv(default_file)
         st.write(f"Fichier par défaut chargé : {default_file}")
